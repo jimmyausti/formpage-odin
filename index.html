@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <img src="./assets/undraw_sign_up_n6im.svg" alt="Cool but generic vector graphic">
+        </section>
+        <section id="form">
+            <h1>Sign up</h1>
+            <form action="example.com" method="post">
+                <fieldset id="inputs">
+                    <div class="input-group" id="input-fullname">
+                        <input type="text" id="full_name" name="fullname" placeholder="John Doe" required>
+                        <!--TODOregex-->
+                        <label for="full_name">Full name: </label>
+                        <!--TODOTool tip for info-->
+                    </div>
+                    <div class="input-group" id="input-age">
+                        <input type="date" name="age" id="age" required>
+                        <!--TODO minimum age-->
+                        <label for="age">Age: </label>
+                        <!--TODOTool tip for info-->
+                    </div>
+                    <div class="input-group" id="input-email">
+                        <input type="email" name="email" id="email" required>
+                        <label for="email">Email: </label>
+                        <!--TODOTool tip for info-->
+                    </div>
+                    <div class="input-group" id="input-password">
+                        <input type="password" name="password" id="password">
+                        <label for="password">Password: </label>
+                    </div>
+                    <div class="input-group" id="confirm-password">
+                        <input type="password" name="password" id="password">
+                        <label for="password">Confirm password: </label>
+                        <!--!Double check correct implementation of password checking-->
+                    </div>
+                </fieldset>
+                <fieldset id="notices">
+                    <div class="small-input">
+                        <input type="checkbox" name="Terms" id="terms_conditions" value="terms_conditions">
+                        <label for="terms_conditions"><small>I have read the <a href="">terms and conditions</a></small></label>
+                    </div>
+                    <small>Already a member? <a href="" target="_blank">Click here</a></small>
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
+<!--
+    User full name - regex
+    User Age - min max - input:date-number
+    User email
+    User Password
+    User confirm Password
+    T&C checkbox
+    Already signed in? hyperlink
+    Button - submit
+
+
+    SCSS - variables
+    !Dark theme
+    Frontend Simplified - styling
+    CSS selector showcase
+    !Tooltip for info for UX
+    ?short animations
+
+
+    
+-->
