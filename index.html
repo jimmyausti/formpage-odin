@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <main>
@@ -15,29 +16,24 @@
             <form action="example.com" method="post">
                 <fieldset id="inputs">
                     <div class="input-group" id="input-fullname">
-                        <input type="text" id="full_name" name="fullname" placeholder="John Doe" required>
-                        <!--TODOregex-->
                         <label for="full_name">Full name: </label>
-                        <!--TODOTool tip for info-->
+                        <input type="text" id="full_name" name="fullname" placeholder="John Doe" pattern="/^(?!.*\s{2})[A-Za-z]+(?:\s+[A-Za-z]+)*$/" required>
                     </div>
                     <div class="input-group" id="input-age">
-                        <input type="date" name="age" id="age" required>
-                        <!--TODO minimum age-->
                         <label for="age">Age: </label>
-                        <!--TODOTool tip for info-->
+                        <input type="date" name="age" id="age" min="2003-07-05" required>
                     </div>
                     <div class="input-group" id="input-email">
-                        <input type="email" name="email" id="email" required>
                         <label for="email">Email: </label>
-                        <!--TODOTool tip for info-->
+                        <input type="email" name="email" id="email" placeholder="example@email.com">
                     </div>
                     <div class="input-group" id="input-password">
-                        <input type="password" name="password" id="password">
                         <label for="password">Password: </label>
+                        <input type="password" name="password" id="password">
                     </div>
                     <div class="input-group" id="confirm-password">
-                        <input type="password" name="password" id="password">
                         <label for="password">Confirm password: </label>
+                        <input type="password" name="confirm-password" id="confirm-password">
                         <!--!Double check correct implementation of password checking-->
                     </div>
                 </fieldset>
