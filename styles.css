@@ -47,31 +47,43 @@ table {
 }
 
 /* font imports */
-h1, small, input {
+h1, small, input, button {
   font-family: "Lato", sans-serif;
 }
 
+/* variables for themes */
+:root.dark {
+  --border: 2px solid white;
+  --primary-color: black;
+  --secondary-color: white;
+}
+
+:root.light {
+  --border: 2px solid black;
+  --primary-color: white;
+  --secondary-color: black;
+}
+
 html {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--primary-color);
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 1rem;
+  margin: 4rem;
   padding: 2.25rem;
-  border: 5px solid black;
+  border: var(--border);
   border-radius: 10px;
+  min-width: 267px;
 }
 
 section:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 img {
@@ -93,13 +105,13 @@ fieldset {
 }
 
 h1 {
-  color: black;
+  color: var(--secondary-color);
   font-size: 2rem;
   text-decoration: underline;
 }
 
 a, small {
-  color: black;
+  color: var(--secondary-color);
 }
 
 .input-group {
@@ -113,20 +125,20 @@ a, small {
 }
 
 .input-group > label {
-  color: black;
+  color: var(--secondary-color);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .input-group > input {
   padding: 0.5rem 0.5rem;
   border-radius: 0.4rem;
-  border: solid black 1px;
+  border: var(--border);
   margin-top: 0.1rem;
   font-size: 1rem;
 }
 
 #notices > * {
-  color: black;
+  color: var(--secondary-color);
 }
 
 .small-input {
@@ -136,8 +148,8 @@ a, small {
 .btn {
   margin: 1.5rem 3rem;
   position: relative;
-  color: white;
-  background-color: black;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
   border: none;
   padding: 1rem 4rem;
   cursor: pointer;
@@ -146,16 +158,23 @@ a, small {
   font-size: 1.4rem;
 }
 
+#toggle-theme {
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  border-radius: 10%;
+}
+
 .btn:hover {
   transform: scale(0.9);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   main {
     flex-direction: column;
   }
   img {
-    width: 50%;
+    width: 20rem;
     height: 50%;
   }
 }
